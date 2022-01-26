@@ -7,17 +7,17 @@ def first_method(score_sheet):
         if score_sheet[i] > winner:
             runner_up = winner
             winner = score_sheet[i]
-        elif arr[i] > runner_up and score_sheet[i] != winner:
+        elif arr[i] > runner_up and score_sheet[i] != winner: #No need the second condition because of set function
             runner_up = score_sheet[i]
     
     return runner_up
 
 def second_method(score_sheet):
     score_sheet.sort()
-    return list(set(score_sheet))[-2]
+    return score_sheet[len(score_sheet) -2]
 
 if __name__ == '__main__':
     n = int(input())
-    arr = list(map(int, input().split()))
+    arr = list(set(map(int, input().split())))
 
-    print(second_method(arr))
+    print(first_method(arr))
