@@ -129,5 +129,6 @@ dmypy.json
 .pyre/
 
 # Custom section
-nested-list.py
 runnerup.sh
+teste.py
+second.py
