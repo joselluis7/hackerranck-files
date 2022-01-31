@@ -7,7 +7,7 @@ def first_method(score_sheet):
         if score_sheet[i] > winner:
             runner_up = winner
             winner = score_sheet[i]
-        elif arr[i] > runner_up and score_sheet[i] != winner: #No need the second condition because of set function
+        elif score_sheet[i] > runner_up and score_sheet[i] != winner: #No need the second condition because of set function
             runner_up = score_sheet[i]
     
     return runner_up
